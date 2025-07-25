@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JML EXPRESS - Courier Internacional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-info">
+                    <span><i class="fas fa-phone"></i> 989 007 968</span>
+                    <span><i class="fas fa-envelope"></i> info@jmlexpress.com</span>
+                </div>
+                <div class="header-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-SHPnnWcOc4uBiJLXSsAaxAqK5dgxih.jpeg" alt="JML EXPRESS" class="logo">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#ubicanos">UBICANOS</a></li>
+                    <li><a href="#nosotros">NOSOTROS</a></li>
+                    <li><a href="#cotizar">COTIZAR</a></li>
+                    <li><a href="#servicios">SERVICIOS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                    <li><a href="#preguntas">PREGUNTAS FRECUENTES</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>¡LLEGARÁ A<br>TUS MANOS<br>ES IMLEXPRESS!</h1>
+                        <p>Servicio de courier y encomiendas a nivel nacional e internacional</p>
+                        <div class="hero-buttons">
+                            <button class="btn-cotizar" onclick="scrollToSection('cotizar')">COTIZAR</button>
+                            <button class="btn-rastrear">RASTREAR</button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="LOGO.jpeg" alt="Servicio de entrega">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bottom">
+            <div class="container">
+                <div class="tracking-section">
+                    <h3>RASTREA TU ENVÍO</h3>
+                    <div class="tracking-form">
+                        <input type="text" placeholder="Ingresa tu código de seguimiento">
+                        <button class="btn-track">RASTREAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clientes Section -->
+    <section class="clientes">
+        <div class="container">
+            <h2>NUESTROS CLIENTES</h2>
+            <div class="clientes-grid">
+                <div class="cliente-item">
+                    <img src="img1.jpg" alt="Cliente 1">
+                    <div class="cliente-overlay">
+                        <h4>EMPRESAS</h4>
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <img src="img2.webp" alt="Cliente 2">
+                    <div class="cliente-overlay">
+                        <h4>PARTICULARES</h4>
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <img src="img3.jpg" alt="Cliente 3">
+                    <div class="cliente-overlay">
+                        <h4>COMERCIOS</h4>
+                    </div>
+                </div>
+                <div class="cliente-item">
+                    <img src="img1.jpg" alt="Cliente 4">
+                    <div class="cliente-overlay">
+                        <h4>INSTITUCIONES</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cotizador Section -->
+    <section class="cotizador" id="cotizar">
+        <div class="container">
+            <div class="cotizador-content">
+                <div class="cotizador-image">
+                    <img src="img1.jpg" alt="Camión JML EXPRESS">
+                    <img src="img1.jpg" alt="Camión JML EXPRESS">
+                    <img src="img1.jpg" alt="Camión JML EXPRESS">
+                </div>
+                <div class="cotizador-form">
+                    <div class="form-header">
+                        <h2>COTIZADOR</h2>
+                        <div class="form-tabs">
+                            <button class="tab active">VERIFICACIÓN</button>
+                            <button class="tab">UBICACIONES</button>
+                            <button class="tab">COTIZADOR</button>
+                        </div>
+                    </div>
+                    <form id="cotizadorForm">
+                        <div class="form-section">
+                            <h3>¿DÓNDE TE RECOGEMOS?</h3>
+                            <div class="form-row">
+                                <select id="departamento" required>
+                                    <option value="">DEPARTAMENTO</option>
+                                    <option value="lima">LIMA</option>
+                                    <option value="arequipa">AREQUIPA</option>
+                                    <option value="cusco">CUSCO</option>
+                                </select>
+                                <select id="provincia" required>
+                                    <option value="">PROVINCIA</option>
+                                    <option value="lima">LIMA</option>
+                                    <option value="callao">CALLAO</option>
+                                </select>
+                            </div>
+                            <select id="distrito" required>
+                                <option value="">DISTRITO</option>
+                                <option value="miraflores">MIRAFLORES</option>
+                                <option value="san-isidro">SAN ISIDRO</option>
+                                <option value="surco">SURCO</option>
+                            </select>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>¿DÓNDE LO ENTREGAMOS?</h3>
+                            <div class="form-row">
+                                <select id="dest-departamento" required>
+                                    <option value="">DEPARTAMENTO</option>
+                                    <option value="lima">LIMA</option>
+                                    <option value="arequipa">AREQUIPA</option>
+                                </select>
+                                <select id="dest-provincia" required>
+                                    <option value="">PROVINCIA</option>
+                                    <option value="lima">LIMA</option>
+                                </select>
+                            </div>
+                            <select id="dest-distrito" required>
+                                <option value="">DISTRITO</option>
+                                <option value="miraflores">MIRAFLORES</option>
+                            </select>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>¿QUÉ QUIERES ENVIAR?</h3>
+                            <input type="text" id="contenido" placeholder="CONTENIDO DEL PAQUETE" required>
+                            <div class="form-row">
+                                <input type="number" id="peso" placeholder="PESO (KG)" step="0.1" required>
+                                <input type="number" id="valor" placeholder="VALOR (S/)" step="0.01" required>
+                            </div>
+                        </div>
+
+                        <div class="precio-total">
+                            <span class="precio-label">PRECIO TOTAL</span>
+                            <span class="precio-valor">S/ 0.00</span>
+                        </div>
+
+                        <button type="submit" class="btn-cotizar-form">COTIZAR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Section -->
+    <section class="como-funciona">
+        <div class="container">
+            <h2>¿Cómo funciona?</h2>
+            <div class="proceso-steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="paso1.jpg" alt="Realiza">
+                    </div>
+                    <h3>REALIZA</h3>
+                    <p>TU PEDIDO</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="paso2.jpg" alt="Recojo">
+                    </div>
+                    <h3>RECOJO</h3>
+                    <p>INMEDIATO</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="paso3.jpg" alt="Seguimiento">
+                    </div>
+                    <h3>SEGUIMIENTO</h3>
+                    <p>EN TIEMPO REAL</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="paso4.jpg" alt="Entrega">
+                    </div>
+                    <h3>ENTREGA</h3>
+                    <p>GARANTIZADA</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="paso5.jpg" alt="Reporte">
+                    </div>
+                    <h3>REPORTE Y ENTREGA</h3>
+                    <p>DE CARGOS</p>
+                </div>
+                <div class="step satisfaction">
+                    <div class="step-icon">
+                        <img src="paso 6.jpg" alt="Satisfecho">
+                    </div>
+                    <h3>Cliente</h3>
+                    <p>satisfecho</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promocion Section -->
+    <section class="promocion">
+        <div class="container">
+            <div class="promocion-content">
+                <p class="promocion-subtitle">¡Aprovecha nuestra promoción!</p>
+                <h2>¡RECOGEMOS TU ENCOMIENDA GRATIS!</h2>
+                <button class="btn-contactanos" onclick="scrollToSection('contacto')">CONTÁCTANOS</button>
+            </div>
+        </div>
+        <div class="promocion-images">
+            <div class="container">
+                <div class="images-grid">
+                    <img src="equipo.jpg" alt="Equipo 1">
+                    <img src="equipo.jpg" alt="Equipo 2">
+                    <img src="equipo.jpg" alt="Equipo 3">
+                    <img src="equipo.jpg" alt="Equipo 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes Section -->
+    <section class="preguntas-frecuentes" id="preguntas">
+        <div class="container">
+            <div class="preguntas-header">
+                <div class="pregunta-character">
+                    
+                    <br><br><div class="speech-bubble">
+
+
+                        
+                        <h3>¿HOLA TIENES DUDAS O PREGUNTAS?</h3>
+                        <div class="contact-info">
+                            <i class="fas fa-phone"></i>
+                            <span>LLAMANOS<br>989007968</span>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            
+            <h2>Preguntas Frecuentes</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Cómo programo un recojo?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer active">
+                        <p>Rpta. Lo ideal es coordinar el recojo con el departamento de Atención al Cliente con un día de anticipación. Y para recojos el mismo día puede llamar desde 8:30 de la mañana.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Qué seguridad tiene mi correspondencia si desea trabajar con JML EXPRESS COURIER?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>JML EXPRESS COURIER garantiza la máxima seguridad en el manejo de su correspondencia con protocolos estrictos de seguridad y personal capacitado.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿JML EXPRESS COURIER garantiza la confidencialidad de mi Base de Datos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, garantizamos total confidencialidad de su información y base de datos bajo estrictos acuerdos de confidencialidad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿Qué seguridad tiene mi correspondencia si desea trabajar con JML EXPRESS COURIER?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Contamos con sistemas de seguimiento en tiempo real y personal altamente capacitado para garantizar la seguridad de sus envíos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿JML EXPRESS COURIER puede embalar mis envíos de carga para cualquier destino?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos servicios de embalaje profesional para cualquier tipo de carga y destino nacional o internacional.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>¿JML EXPRESS COURIER otorga crédito a sus clientes?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos facilidades de crédito para clientes corporativos y frecuentes bajo evaluación crediticia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicanos Section -->
+    <section class="ubicanos" id="ubicanos">
+        <div class="ubicanos-hero">
+            <div class="container">
+                <h1>UBICANOS</h1>
+                <img src="LOGO.jpeg" alt="Flota JML EXPRESS" class="fleet-image">
+            </div>
+        </div>
+        
+        <div class="ubicanos-content">
+            <div class="container">
+                <div class="ubicanos-grid">
+                    <div class="ubicanos-info">
+                        <h2>UBICA NUESTRAS TIENDAS</h2>
+                        <div class="ubicacion-form">
+                            <select id="region">
+                                <option value="">REGIÓN</option>
+                                <option value="lima">LIMA</option>
+                                <option value="arequipa">AREQUIPA</option>
+                            </select>
+                            <select id="ciudad">
+                                <option value="">CIUDAD</option>
+                                <option value="lima">LIMA</option>
+                            </select>
+                            <button class="btn-buscar">BUSCAR</button>
+                        </div>
+                        
+                        <div class="ubicacion-item">
+                            <h3>LIMA - OFICINA PRINCIPAL</h3>
+                            <p>Av. Principal 123, Lima, Perú</p>
+                            <p>Teléfono: (01) 989-007-968</p>
+                            <p>Horario: Lun - Vie 8:00 AM - 6:00 PM</p>
+                            <button class="btn-ver-mapa" onclick="openMapModal()">VER MAPA</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Nosotros Section -->
+<section class="nosotros" id="nosotros">
+    <div class="container">
+        <div class="nosotros-content">
+            <div class="nosotros-text">
+                <h2 class="section-title">NOSOTROS</h2>
+                <p class="intro-text">JML EXPRESS es una empresa líder en servicios de courier internacional con más de 10 años de experiencia en el mercado peruano. Nos especializamos en brindar soluciones logísticas integrales para empresas y particulares.</p>
+                
+                <div class="mission-vision">
+                    <div class="mv-item">
+                        <h3>Nuestra Misión</h3>
+                        <p>Conectar personas y empresas a través de un servicio de courier confiable, rápido y seguro, garantizando la satisfacción total de nuestros clientes.</p>
+                    </div>
+                    
+                    <div class="mv-item">
+                        <h3>Nuestra Visión</h3>
+                        <p>Ser la empresa de courier líder en el Perú, reconocida por nuestra excelencia en el servicio y nuestra capacidad de innovación constante.</p>
+                    </div>
+                </div>
+                
+                <div class="valores-section">
+                    <h3>Nuestros Valores</h3>
+                    <div class="valores-grid">
+                        <div class="valor-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Confiabilidad</span>
+                        </div>
+                        <div class="valor-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Puntualidad</span>
+                        </div>
+                        <div class="valor-item">
+                            <i class="fas fa-lock"></i>
+                            <span>Seguridad</span>
+                        </div>
+                        <div class="valor-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Innovación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nosotros-image">
+                <div class="logo-container">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-I6prdyOIqbZoDr27QfttBR5P2kI1Pu.png" alt="JML EXPRESS Logo" class="company-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Servicios Section -->
+<section id="servicios" class="services">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">NUESTROS SERVICIOS</h2>
+            <p class="section-subtitle">Ofrecemos soluciones integrales de logística y transporte para satisfacer todas tus necesidades</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card" data-service="courier-express">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Courier Express">
+                    <div class="service-overlay">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3>COURIER EXPRESS</h3>
+                    <p>Entrega en 24 horas dentro de Lima y principales ciudades del país</p>
+                </div>
+            </div>
+            
+            <div class="service-card" data-service="courier-internacional">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Courier Internacional">
+                    <div class="service-overlay">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3>COURIER INTERNACIONAL</h3>
+                    <p>Envíos a más de 50 países con seguimiento completo</p>
+                </div>
+            </div>
+            
+            <div class="service-card" data-service="carga-pesada">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Carga Pesada">
+                    <div class="service-overlay">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3>CARGA PESADA</h3>
+                    <p>Transporte de mercancías de gran volumen y peso</p>
+                </div>
+            </div>
+            
+            <div class="service-card" data-service="almacenaje">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Almacenaje">
+                    <div class="service-overlay">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3>ALMACENAJE</h3>
+                    <p>Servicios de almacenamiento temporal y distribución</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Modal -->
+<div class="modal" id="serviceModal">
+    <div class="modal-content service-modal-content">
+        <div class="modal-header">
+            <h3 id="modalTitle"></h3>
+            <button class="modal-close" id="modalClose">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img id="modalImage" src="/placeholder.svg" alt="">
+            </div>
+            <div class="modal-info">
+                <p id="modalDescription"></p>
+                <div class="modal-features" id="modalFeatures"></div>
+                <div class="modal-benefits" id="modalBenefits"></div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="openWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                        Solicitar Información
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('cotizar')">
+                        <i class="fas fa-calculator"></i>
+                        Cotizar Servicio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Contacto Section -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <h2>CONTÁCTANOS</h2>
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Av. Principal 123, Lima, Perú</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+51 989 007 968</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@jmlexpress.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horario</h4>
+                            <p>Lun - Vie: 8:00 AM - 6:00 PM<br>Sáb: 8:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contacto-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="nombre" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefono" placeholder="Teléfono" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="servicio" required>
+                                <option value="">¿Qué servicio necesitas?</option>
+                                <option value="courier-express">Courier Express</option>
+                                <option value="courier-internacional">Courier Internacional</option>
+                                <option value="carga-pesada">Carga Pesada</option>
+                                <option value="almacenaje">Almacenaje</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-enviar">ENVIAR MENSAJE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-SHPnnWcOc4uBiJLXSsAaxAqK5dgxih.jpeg" alt="JML EXPRESS" class="footer-logo">
+                    <p>Tu socio confiable en servicios de courier internacional. Conectamos el mundo con seguridad y eficiencia.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Courier Express</a></li>
+                        <li><a href="#servicios">Courier Internacional</a></li>
+                        <li><a href="#servicios">Carga Pesada</a></li>
+                        <li><a href="#servicios">Almacenaje</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#ubicanos">Ubicaciones</a></li>
+                        <li><a href="#preguntas">Preguntas Frecuentes</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> +51 989 007 968</p>
+                        <p><i class="fas fa-envelope"></i> info@jmlexpress.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Lima, Perú</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 JML EXPRESS. Todos los derechos reservados.</p>
+                    <div class="footer-links">
+                        <a href="#">Términos y Condiciones</a>
+                        <a href="#">Política de Privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Map Modal -->
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMapModal()">&times;</span>
+            <h3>Nuestra Ubicación</h3>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.3!2d-77.0428!3d-12.0464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDAyJzQ3LjAiUyA3N8KwMDInMzQuMSJX!5e0!3m2!1ses!2spe!4v1234567890"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            <div class="modal-info">
+                <h4>JML EXPRESS - Oficina Principal</h4>
+                <p><strong>Dirección:</strong> Av. Principal 123, Lima, Perú</p>
+                <p><strong>Teléfono:</strong> +51 989 007 968</p>
+                <p><strong>Horario:</strong> Lunes a Viernes de 8:00 AM a 6:00 PM</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/51989007968?text=Hola, me gustaría obtener información sobre sus servicios de courier" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
